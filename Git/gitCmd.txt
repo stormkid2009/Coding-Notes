@@ -47,3 +47,5 @@ $ ssh -T git@github.com
 
 $ git branch -a
     show our branches
+$ git checkout -b <new branch name>
+    make new branch and change directory to it.
