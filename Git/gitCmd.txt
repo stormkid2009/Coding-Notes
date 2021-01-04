@@ -45,5 +45,5 @@ $ cat ............. put the directory of ssh here
 $ ssh -T git@github.com
     to test our key.
 
-$ git branch
+$ git branch -a
     show our branches
