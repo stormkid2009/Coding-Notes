@@ -46,6 +46,8 @@ $ ssh -T git@github.com
     to test our key.
 
 $ git branch -a
+ or
+$ git branch --list
     show our branches
 $ git checkout -b <new branch name>
     make new branch and change directory to it.
