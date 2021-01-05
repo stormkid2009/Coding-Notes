@@ -1,54 +1,89 @@
 $ git --version
     to check the version of git we have inside our system.
+
+
 $ mkdir <name of new folder>
     just create new directory or folder.
+
+
 $ touch <name of new file>
     just create new file we need.
+
+
+$ rm <filename>
+    delete existing file.
+    
+
 $ cd <directory>
     change our directory.[we need more details about command lines of terminal]
+
+
 $ git init
     initiliaze a new git repository.
+
+
 $ git add <file>
     <filename>
     or <.html> files with extension
     < . > to add all kind of files.
     we add file or files to the stage area
     means we can keep track them.
+
+
 $ git commit -m "write description for the commit"
     we make snapshot of our changes ready to push them to remote
     or merge them with local repo.
 
+
 $ git log
     give information about commits ,time ,author ....etc
+
+
+$ git checkout <hash of commit> <filename>
+    undo commited changes and back to the previous version.
 
 
 $ touch .gitignore
     create our gitignore file 
     simply files added to gitignore are not included
     while making commits.
+
+
 $ clear
     or ctrl+l
     clearing our terminal.
+
+
 $ git config --global user.name
-    this will show our global username for git
+    this will show our global username for git.
+
+
 $ git config --global user.name "write name here "
     assign a user name.
+
+
 $ git config --global --edit
     this will get our configuration list in editor
     so we can make changes manually.
+
+
 $ ssh-keygen -t rsa -b 4096 -C "valid e mail"
     ssh = secure shell
     keygen = key generate
     -t rsa  = type of algoritm we will use.
+
 $ enter file................ 
     we will use the directory of the file later.
+
 $ enter password....
     remember this pass its key pass we gonna need it.
 
 $ cat ............. put the directory of ssh here
     after this copy the content of key and put it in github.
+
 $ ssh -T git@github.com
     to test our key.
+
 
 $ git remote add origin  "ur repo link here"
     connecting our local repo with remote at github.
@@ -58,30 +93,39 @@ $ git fetch
     retrieve the latest meta-data info from the original [remote repo]
     to know the changes done in the remote repo/branch since your last pull.
 
+
 $ git diff <master branch_path> < origin remote_path>
     follow fetch command to compare the local repo with remote
     so we can figure out the changes .
-    #to check branch_path just [$git branch -a]
+    #to check branch_path just [$git branch -a].
+
 
 $ git pull origin master
     clone/download  a copy of remote repo on local machine
     git pull[doing two operations here] = git fetch + git merge within master branch.
 
+
 $ git branch <branch name>
     create a branch.
 
+
 $ git checkout <branch name>
     switch to a branch.
+
 
 $ git branch -a
  or
 $ git branch --list
     show our branches
+
+
 $ git checkout -b <new branch name>
     make new branch and switch to it.
 
+
 $ git branch -d <branch name>
     to delete a branch from local repository.
+
     
  $ git checkout master
  $ git merge <feature branch>
@@ -89,6 +133,7 @@ $ git branch -d <branch name>
     *Use merge in cases where you want a set of commits to be clearly grouped together 
     in history.
     
+
  $ git checkout <feature branch>
  $ git rebase master
     do same thing like merge but order commits in a better way.
