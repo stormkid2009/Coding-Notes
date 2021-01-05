@@ -17,6 +17,11 @@ $ git add <file>
 $ git commit -m "write description for the commit"
     we make snapshot of our changes ready to push them to remote
     or merge them with local repo.
+
+$ git log
+    give information about commits ,time ,author ....etc
+
+
 $ touch .gitignore
     create our gitignore file 
     simply files added to gitignore are not included
@@ -45,9 +50,34 @@ $ cat ............. put the directory of ssh here
 $ ssh -T git@github.com
     to test our key.
 
+$ git remote add origin  "ur repo link here"
+    connecting our local repo with remote at github.
+
+
+$ git fetch
+    retrieve the latest meta-data info from the original [remote repo]
+    to know the changes done in the remote repo/branch since your last pull.
+
+$ git diff <master branch> < origin remote>
+    follow fetch command to compare the local repo with remote
+    so we can figure out the changes .
+
+$ git pull origin master
+    clone/download  a copy of remote repo on local machine
+    git pull[doing two operations here] = git fetch + git merge within master branch.
+
+$ git branch <branch name>
+    create a branch.
+
+$ git checkout <branch name>
+    switch to a branch.
+
 $ git branch -a
  or
 $ git branch --list
     show our branches
 $ git checkout -b <new branch name>
-    make new branch and change directory to it.
+    make new branch and switch to it.
+
+$ git branch -d <branch name>
+    to delete a branch from local repository.
