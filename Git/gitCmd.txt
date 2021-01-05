@@ -86,11 +86,11 @@ $ git branch -d <branch name>
  $ git checkout master
  $ git merge <feature branch>
     merge changes of feature branch into master branch.
-   # Use merge in cases where you want a set of commits to be clearly grouped together 
+    *Use merge in cases where you want a set of commits to be clearly grouped together 
     in history.
     
  $ git checkout <feature branch>
  $ git rebase master
     do same thing like merge but order commits in a better way.
-    #Use rebase when you want to keep a linear commit history
-    #DON’T use rebase on a public/shared branch
+    *Use rebase when you want to keep a linear commit history
+    *DON’T use rebase on a public/shared branch
