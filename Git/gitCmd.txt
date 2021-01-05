@@ -58,9 +58,10 @@ $ git fetch
     retrieve the latest meta-data info from the original [remote repo]
     to know the changes done in the remote repo/branch since your last pull.
 
-$ git diff <master branch> < origin remote>
+$ git diff <master branch_path> < origin remote_path>
     follow fetch command to compare the local repo with remote
     so we can figure out the changes .
+    #to check branch_path just [$git branch -a]
 
 $ git pull origin master
     clone/download  a copy of remote repo on local machine
