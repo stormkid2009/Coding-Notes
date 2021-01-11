@@ -1,0 +1,24 @@
+Title : " introduction to Props "
+
+*props is object which we declare within the function or class 
+*then we assign it a vlaue in the render time.
+
+<Code>
+const App =(props)=>{
+    return(
+        <div>
+        {/*props is an object we declare inside our function
+        component */}
+        <p>hello today is  , {props.date} </p>
+        </div>
+    );
+}
+</Code>
+     we assign value to props within the render method or the render time in general.
+
+<Code>
+ReactDOM.render(<App date={Date()} />,document.getElementById('root'));
+</Code>
+
+
+ props is immutable then we can not reassign value to props.
