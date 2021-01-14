@@ -1,6 +1,7 @@
 Title " JSX "
  
- *JSX stands for javascript xml:
+ >>>What is JSX ?
+ JSX stands for javascript xml:
 
 <Code >
 const el= <p>this is not html </p>
