@@ -1,0 +1,13 @@
+Title : " component's life cycle "
+
+React provide us with methods or hooks during certain points 
+during the life cycle of components.
+1- Mount to the DOM>>>> it is the first cycle in component's life.
+2- Update  >>>> changes happend to it and need to re render again.
+3- UnMount >>>> will be removed from the dom.
+
+
+
+
+
+

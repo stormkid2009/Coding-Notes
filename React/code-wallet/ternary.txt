@@ -1,0 +1,41 @@
+Title : " using ternary instead of if condition"
+
+
+<Code>
+export default class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      input:'',
+      userDeg:''
+    }
+    this.handleChange = this.handleChange.bind(this);
+    this.submit=this.submit.bind(this);
+  }
+  handleChange(e){
+this.setState({input:e.target.value});
+
+  };
+  submit(){
+this.setState(state=>({
+  userDeg:state.input,input:''
+}));
+console.log(this.state.input)
+  }
+  render(){
+    const bad = <h1>Bad</h1>;
+    const good = <h1>Good</h1>;
+    const perfect = <h1>Perfect</h1>
+    return(
+<div>
+<input onChange={this.handleChange}></input>
+<button onClick={this.submit}>Submit</button>
+
+{/* using ternary to render jsx element h1 in this case */}
+{this.state.userDeg>=50?perfect:this.state.userDeg>=20?good:bad}
+
+</div>
+    );
+  }
+}
+</Code>

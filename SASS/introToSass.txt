@@ -1,0 +1,35 @@
+>>>variables in sass:
+${variable name}:{value}   >>>>>
+    $main-color:red;
+
+>>>Sass allows nesting of CSS rules, which is a useful 
+way of organizing a style sheet:
+    .main{
+        h1{
+            color:$main-color
+        }
+        p{
+            font-family:$main-font
+        }
+    }
+
+>>> functions in sass:
+>>declaring the function:
+    @mixin {function name} (function parameters){
+        function body here
+    }
+
+>>call the function :
+@include {function name} (function arguments)
+
+<Code>
+@mixin colors($bgColor,$color) {
+  background-color: $bgColor;
+  color: $color;
+}
+
+.container{
+@include colors(black,white )  
+}
+
+</Code>
