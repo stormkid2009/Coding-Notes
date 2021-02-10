@@ -1,0 +1,15 @@
+Title : " using extend "
+instead of copy paste and repeat the same code
+we can inherit styles from element to another:
+
+<Code>
+
+.main{
+    width:100px;
+    color:blue;
+}
+.sub{
+    @extend .main; >>> we inherit all main styles
+    font-size:20px; >>> and write sub owen's styles
+}
+</Code>

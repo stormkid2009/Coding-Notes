@@ -1,0 +1,10 @@
+
+>>declare the function
+@mixin name ($bool)
+
+@if $bool == true {
+    do something....
+}
+
+>>call the function
+@include name(ture);

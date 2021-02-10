@@ -1,0 +1,10 @@
+Title : " using partial or modules "
+
+dividing styles into small chuncks and import them inside main scss file:
+_moduleName.scss >>>declaring scss modules
+@import 'moduleName'
+
+<Code>
+_colors.scss
+@import 'colors'
+</Code>

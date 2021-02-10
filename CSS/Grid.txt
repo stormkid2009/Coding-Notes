@@ -1,0 +1,14 @@
+Title : " grid system "
+
+we will note some attibutes here
+
+<Code>
+.container{
+    display:grid;  >>container has this one within
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; >>>determine columns size
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; >>> determine rows size
+}
+
+
+
+</Code>
