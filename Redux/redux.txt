@@ -1,0 +1,12 @@
+what is redux?
+simply is predictive state container,
+the only source of truth for state .
+what are the components of redux?
+store>>> where we can store our data
+action>>> it describes what we need to do/update with state
+reducer>>> it does the work to update/modify state
+    reducer take state and action as arguments
+    reducer itself is an argument to the method Redux.store(reducer)
+
+ok we can deal with multi state's elements
+and many actions.
