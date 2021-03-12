@@ -6,8 +6,36 @@ during the life cycle of components.
 2- Update  >>>> changes happend to it and need to re render again.
 3- UnMount >>>> will be removed from the dom.
 
+for the class component we have 3 main methods:
 
+componentDidMount(){
 
+}
 
+componentDidUpdate(){
+
+}
+
+componentWillUnmount(){
+
+}
+
+for functional component we have :
+
+useEffect(
+    ()=>{
+        our call back function
+    }
+
+    //we can mimic willunmount hook by return a function to remove event listenrs 
+    return ()=>{
+        we can unsubscribr component's activity here
+    }
+,[]);
+the empty array as second argument to tell react to render this only one time in the life cycle
+of our component.
+
+if we need to re render according to certain dependency we just add it instead of empty array
+that dependency maybe state .
 
 

@@ -1,12 +1,9 @@
-Title : " Did component mount "
 
-.............................
-...............................
-the example below use the method didmount to call API from server
-to change the user name:
+/*the example below use the method didmount to call API from server
+to change the user name:*/
 
-<Code>
-export default  class App extends React.Component {
+
+ class App extends React.Component {
   constructor(props){
     super(props);
     this.state={
@@ -29,4 +26,4 @@ export default  class App extends React.Component {
   
 }
 
-</Code>
+//dont forget to export ur component

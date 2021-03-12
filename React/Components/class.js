@@ -1,9 +1,9 @@
-*the second way to make Component is ES6 class
+/*the second way to make Component is ES6 class
 it is useful for many features like local state and life cycle method.
-*notice that react hooks can do the same things like class.
+notice that react hooks can do the same things like class.*/
 
 
-<Code>
+
 class App extends React.Component{
     constructor(props){
         super(props);
@@ -14,4 +14,4 @@ class App extends React.Component{
         );
     }
 }
-</Code>
+//we shall export our class component here
