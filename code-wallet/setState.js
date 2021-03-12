@@ -1,4 +1,4 @@
-Title :"useState method and handle events"
+// Title :"setState method and handle events"
 
 import React from "react";
 import "./style.css";
@@ -33,8 +33,8 @@ export default class App extends React.Component{
     );
   }
 }
-##########################
-this code below to be verified
+
+//this code below to be verified
 
 import React from "react";
 import "./style.css";

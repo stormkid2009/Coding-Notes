@@ -1,11 +1,11 @@
-Title : " Game for addition solving "
+/* Title : " Game for addition solving "
 >>>under progress:
 features to add:
 make it multiplication table
 render interface to announce victoiry if score reaches some number and add back to Game
 render interface to announce loose and back to game
-activate the Reset button
-<Code>
+activate the Reset button */
+
 
 import React from "react";
 import "./style.css";
@@ -77,4 +77,3 @@ export default class App extends React.Component{
   
 }
 
-</Code>
