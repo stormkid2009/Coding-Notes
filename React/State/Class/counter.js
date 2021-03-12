@@ -1,7 +1,7 @@
-Title : " make simple counter "
+//Title : " make simple counter "
 
 
-<Code>
+
 class Counter extends React.Component {
   constructor(props) {
     super(props);
@@ -42,4 +42,3 @@ this.setState(state=>{
     );
   }
 };
-</Code>

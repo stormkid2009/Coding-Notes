@@ -1,11 +1,11 @@
 Title : " propTypes "
-*because of the need to check types in React
+/*because of the need to check types in React
     and this is not provided in javascript
-    we have got propTypes to solve this.
+    we have got propTypes to solve this.*/
 
-*propTypes with functional Component:
+//propTypes with functional Component:
 
-<Code>
+
 const User=()=>{
     return(
         <div>{props.age}</div>
@@ -14,11 +14,11 @@ const User=()=>{
 User.propTypes = {
     age : propTypes.number.isRequired
 };
-</Code>
 
-*propTypes with class Component:
 
-<Code>
+//propTypes with class Component:
+
+
 class User extends React.Component{
     constructor(props){
         super(props);
@@ -28,11 +28,9 @@ class User extends React.Component{
             <div> {this.props.age}</div>
         );
     }
-       
-    }
 }
  User.propTypes = {
             
             Age : PropTypes.number.isRequired
         }
-</Code>
+

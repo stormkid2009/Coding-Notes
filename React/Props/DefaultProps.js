@@ -1,19 +1,18 @@
-Title : " Default Props "
 
-* in case we did not pass a value to name property
-    we already add default value.
+// in case we did not pass a value to name property
+ //   we already add default value.
 
-<Code>
+
 const User=(props)=>{
     return(
         <div>welcome , {props.name || "Anwar"}</div>
     );
 }
-</Code>
 
-* pass default Props to Class Component:
 
-<Code>
+// pass default Props to Class Component:
+
+
 class User extends React.Component{
     constructor(props){
         super(props);
@@ -23,18 +22,17 @@ class User extends React.Component{
             <div>{this.props.name} , {this.props.age}</div>
         );
     }
-       
-    }
 }
+
  User.defaultProps = {
             name : " Anwar ",
             Age : " 42 "
         }
-</Code>
 
-*pass default props to functional Component:
 
-<Code>
+//pass default props to functional Component:
+
+
 const User=(props)=>{
     return(
         <div>
@@ -46,4 +44,3 @@ User.defaultProps = {
             name : " Anwar ",
             age : " 42 "
         }
-</Code>

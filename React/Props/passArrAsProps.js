@@ -1,9 +1,9 @@
-Title : " pass an array as props"
 
-*we can pass an array as props and use its methods like join 
-    in the case below:
 
-<Code>
+//we can pass an array as props and use its methods like join 
+ //   in the case below:
+
+
 const DisplayColors=(props)=>{
   return(
     <div>
@@ -13,7 +13,8 @@ const DisplayColors=(props)=>{
     </div>
   );
 }
-.............................
+
+
 export default class App extends React.Component { 
   constructor(props){
     super(props);
@@ -21,13 +22,13 @@ export default class App extends React.Component {
   render(){
     return(
       <div>
-      <DisplayColors colors={["red","yellow","green"]} > 
+      <DisplayColors colors={["red","yellow","green"]} /> 
       </div>
     );
   }
 }
 
-</Code>
+
 
 
 

@@ -1,9 +1,9 @@
-Titel : " pass state as props "
+/*Titel : " pass state as props "
 we can say to support one direction flow from top to bottom
-passing state to element as props.
+passing state to element as props.*/
 
 
-<Code>
+
 export default class App extends React.Component{
   constructor(props){
     super(props);
@@ -30,4 +30,3 @@ class Item extends React.Component{
   }
   
 }
-</Code>

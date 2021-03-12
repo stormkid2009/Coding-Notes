@@ -1,9 +1,5 @@
-Title : "Should Component update??"
-.....................
-.....................
 
 
-<Code>
 export default class App extends React.Component {
   constructor(props){
     super();
@@ -54,4 +50,3 @@ class Title extends React.Component{
   );
   }
 }
-</Code>

@@ -1,11 +1,11 @@
-Title : " introduction to Props "
 
->>>What is props?
+
+/*What is props?
     props is object which we declare within the function or class 
     then we assign it a vlaue in the render time.
-    and we can say an object that we pass from parent to child element.
+    and we can say an object that we pass from parent to child element.*/
 
-<Code>
+
 const App =(props)=>{
     return(
         <div>
@@ -14,12 +14,12 @@ const App =(props)=>{
         </div>
     );
 }
-</Code>
+
      
 
-<Code>
+
 ReactDOM.render(<App date={Date()} />,document.getElementById('root'));
-</Code>
 
 
- >>>props is immutable then we can not reassign value to props.
+
+ //props is immutable then we can not reassign value to props.

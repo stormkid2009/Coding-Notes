@@ -1,12 +1,12 @@
 Title : "introduction to state "
 
-* state is the storage of stateful components (ES6 class or Hooks)
+/* state is the storage of stateful components (ES6 class or Hooks)
     we can easily make our UI dynamic with updating state
-    as u know props is immutable.
+    as u know props is immutable.*/
 
-*with class components we define our state inside the instructor method:
+//with class components we define our state inside the instructor method:
 
-<Code>
+
 class App extends React.Component{
     constructor(){
         super();
@@ -20,11 +20,11 @@ class App extends React.Component{
         );
     }
 }
-</Code>
 
-*we can write javascript and assign state property to a variable:
 
-<Code>
+//we can write javascript and assign state property to a variable:
+
+
 class App extends React.Component{
     constructor(){
         super();
@@ -39,4 +39,3 @@ class App extends React.Component{
         );
     }
 }
-</Code>

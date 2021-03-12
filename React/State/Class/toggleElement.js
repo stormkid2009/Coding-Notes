@@ -1,8 +1,8 @@
-simply each click the button the state will be updated to show
-the <h1> or hide it
+/*simply each click the button the state will be updated to show
+the <h1> or hide it*/
 
 
-<Code>
+
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -43,4 +43,3 @@ toggleVisibility(){
     }
   }
 }
-</Code>

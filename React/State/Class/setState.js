@@ -1,11 +1,11 @@
-Title "manage state with setState method"
+//Title "manage state with setState method"
 
-*as we can see in the title React method setState
+/*as we can see in the title React method setState
     give us the control of component's state 
-    let's check this in the example below:
+    let's check this in the example below:*/
 
 
-<Code>
+
 export default class App extends React.Component{
   constructor(props){
     super(props);
@@ -27,4 +27,3 @@ export default class App extends React.Component{
     );
   }
 }
-</Code>

@@ -1,11 +1,11 @@
-Title:  "submit a form "
+/*Title:  "submit a form "
 
 in the below code we will do two steps:
 1-update the state with the content of input>>>>> change handler method.
-2-display user input within h1 element>>>>submit handler method
+2-display user input within h1 element>>>>submit handler method*/
 
 
-<Code>
+
 class MyForm extends React.Component {
   constructor(props) {
     super(props);
@@ -44,4 +44,3 @@ class MyForm extends React.Component {
     );
   }
 }
-</Code>
