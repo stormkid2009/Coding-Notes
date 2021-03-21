@@ -1,0 +1,21 @@
+important information should be add here:
+
+"author": "information about the creator of the project"
+"description":"information about the project"
+"keywords":["array of words related to our project"]
+"license":"information for user telling him what permission he has with our project">>>"MIT /BSD" for
+open source project
+"dependencies":"information about software needed for our project"
+>>>>>"package-name":"version"
+version>>>> "MAJOR.MINOR.PATCH" like
+"express":"4.14.0"
+This means that PATCHes are bug fixes and 
+MINORs add new features but neither of them break what worked before. 
+Finally, MAJORs add changes that won’t work with earlier versions.
+we need package free bugs with the latest patch to do so : add tilde(~) as prefix to package version
+"package-name":"~4.14.0"
+if we need  both MINOR updates and PATCHes the caret(^) will allow this.
+"package-name":"^4.14.0"
+
+But what if you want to remove an external package that you no longer need? 
+ just remove the corresponding key-value pair for that package from your dependencies.
