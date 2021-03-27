@@ -37,3 +37,8 @@ var app = express();
 
   //Assets at the /public route
   app.use("/public", express.static(__dirname + "/public"));
+
+  //creating API to get data from json file
+  app.get("your-app-url/json",(req,res)=>{
+      res.json({"message": "Hello json"})
+  })
