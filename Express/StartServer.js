@@ -2,6 +2,8 @@
 var express = require('express');
 //declare our app
 var app = express();
+//import path module from node to handle path
+var path = require("path");
 //In Express, routes takes the following structure: app.METHOD(PATH, HANDLER).
 //METHOD is an http method in lowercase. 
 //PATH is a relative path on the server (it can be a string, or even a regular expression).
@@ -21,7 +23,10 @@ var app = express();
   app.get("/",function(req,res){
       res.sendFile(__dirname + "src/index.html")
   })
-
+ // or this code
+  app.get('/',(req,res)=>{
+  res.sendFile(path.join(__dirname + '/index.html'))
+ })
   /*the static assets needed by your application (stylesheets, scripts, images).
   we can use middleware for it:
   >>> express.static(path), 
