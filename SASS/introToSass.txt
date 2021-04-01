@@ -1,3 +1,7 @@
+$npm install node-sass --save
+or
+$yarn add node-sass
+
 >>>variables in sass:
 ${variable name}:{value}   >>>>>
     $main-color:red;
