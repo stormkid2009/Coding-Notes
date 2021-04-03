@@ -1,0 +1,30 @@
+/* "Get Route Parameter Input from the Client" 
+    when building API we need to let the client side know
+    how to get the information He needs by using Route params
+    Route parameters named segments of the URL delimited by slashes (/)
+    Each segment captures the value of the part of the URL which matches its position. 
+    The captured values can be found in the req.params object.
+
+    *************************
+    route_path: '/user/:userId/book/:bookId'
+    actual_request_URL: '/user/546/book/6754'
+    req.params: {userId: '546', bookId: '6754'}
+    **************************
+
+*/
+
+app.get('/:word/echo',(req,res)=>{
+    const {word} = req.params;
+    res.json({echo:word});
+});
+
+//In order to get route parameters from a POST request, the general format is as follows:
+app.post("/:param1/:param2", (req, res) => {
+    // Access the corresponding key in the req.params
+    // object as defined in the endpoint
+    var param1 = req.params.param1;
+    // OR use destructuring to get multiple parameters
+    var { param1, param2 } = req.params;
+    // Send the req.params object as a JSON Response
+    res.json(req.params);
+  });
