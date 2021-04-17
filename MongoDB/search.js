@@ -25,9 +25,8 @@ const findPeopleByName = (personName, done) => {
     
   };
 
-  //Note we shall export all these functions to use in server.js
-exports.PersonModel = Person;
-exports.createAndSavePerson = createAndSavePerson;
+  //Note we shall export all these functions so we can reuse them again.
+
 exports.findPeopleByName = findPeopleByName;
 exports.findOneByFood = findOneByFood;
 exports.findPersonById = findPersonById;

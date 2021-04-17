@@ -45,7 +45,7 @@ const createManyPeople = (arrayOfPeople,done)=>{
     
 
 };
-//Note we shall export all functions to server.js
+//Note we shall export all functions so we can reuse them in other places.
 exports.PersonModel = Person;
 exports.createAndSavePerson = createAndSavePerson;
 exports.createManyPeople = createManyPeople;
