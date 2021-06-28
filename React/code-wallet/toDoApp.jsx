@@ -1,9 +1,12 @@
+/*
 Title: " simple todo list "
 store tasks as an array within our state
 map over the tasks using .map function
 
+*/
 
-<Code>
+
+
 
 export default class App extends React.Component {
   constructor(props){
@@ -49,11 +52,11 @@ this.setState({toDoList:itemsArr});
   }
 }
 
-</Code>
 
-ANOTHER WAY USING REACT HOOKS
 
-<Code>
+//ANOTHER WAY USING REACT HOOKS
+
+
 
 function App(){
   const [state,setState]=useState([]);
@@ -87,4 +90,3 @@ const tasks=state.map(task=><li key={task+22}>{task}</li>);
 }
 export default App
 
-</Code>

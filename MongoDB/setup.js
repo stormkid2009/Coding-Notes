@@ -9,13 +9,7 @@ We will use mongo atlas  [cloud service of mongo]
 const mongoose = require('mongoose');
 //we save MONGO_URI AS variable in .env file .
 mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true, useUnifiedTopology: true });
-/*
-first of all we need to create a schema: maps to mongodb collection.
->>>It defines the shape of the documents within that collection. 
-Schemas are building block for Models
- A model allows you to create instances of your objects, called documents.
 
-*/
 //create Schema
 const Schema = mongoose.Schema ;
 const personSchema = new Schema({
@@ -23,7 +17,7 @@ const personSchema = new Schema({
     age :  Number,
     favoriteFoods : [String]
 });
-//create model
+//compile personSchema with mongoose.model
 const Person = mongoose.model('Person',personSchema);
 
 //create and  save  a record of a model

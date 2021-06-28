@@ -1,7 +1,7 @@
-Title : " using if condition to render element or not "
+//Title : " using if condition to render element or not "
 
 
-<Code >
+
 export default class App extends React.Component {
   constructor(props){
     super(props);
@@ -35,15 +35,15 @@ return(
   }
 }
 
-</Code>
 
 
-........................
 
-there's a more concise way to achieve the same result:
-{condition && <p>markup</p>}
 
-<Code>
+
+/*there's a more concise way to achieve the same result:
+{condition && <p>markup</p>}*/
+
+
 export default class App extends React.Component {
   constructor(props){
     super(props);
@@ -68,4 +68,3 @@ export default class App extends React.Component {
 );
   }
 }
-</Code>

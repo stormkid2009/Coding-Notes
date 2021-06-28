@@ -1,7 +1,9 @@
-Title : " using condition via props "
-this is so powerful check the example below.
+/*
+  Title : " using condition via props "
+  this is so powerful check the example below.
 
-<Code>
+*/
+
 
 function Display(props) {
   return (
@@ -36,4 +38,3 @@ export default class App extends React.Component{
   
 }
 
-</Code>

@@ -1,6 +1,6 @@
-Title: " use condition to choose render components "
+//Title: " use condition to choose render components "
 
-<Code>
+
 
 import React from "react";
 import "./style.css";
@@ -54,4 +54,3 @@ export default class App extends React.Component{
     );
   }
 }
-</Code>

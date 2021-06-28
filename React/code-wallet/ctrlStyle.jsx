@@ -1,8 +1,8 @@
-Title : "control style with hooks "
+/*Title : "control style with hooks "
 
-it's simple app to change the color of h1 using state with react hooks.
+it's simple app to change the color of h1 using state with react hooks.*/
 
-<Code>
+
 import React,{useState} from "react";
 import "./style.css";
 
@@ -21,12 +21,12 @@ export default function App() {
   );
 }
 
-</Code>
 
-inside app.css implement this Code with the class Name incorrect.
-<Code>
 
+//inside app.css implement this Code with the class Name incorrect:
+
+/*
 .incorrect{
   color:red;
 }
-</Code>
+*/
