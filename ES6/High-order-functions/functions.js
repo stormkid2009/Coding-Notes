@@ -1,6 +1,6 @@
 /*
-in this section we will cover 3 of high order functions
-in javascript (map , filter , reduce)
+high order function is a function accepts another func as argument or within its body
+for example (map , filter , reduce)
 */
 //map  >>> return new array from the origin one
 let Arr=['A','B','C'];

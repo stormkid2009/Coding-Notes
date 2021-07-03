@@ -1,0 +1,11 @@
+node package manager is huge store for external packages which we gonna need 
+in our projects and be sure we won't reinvent the wheel
+
+npm init -y to create package.json with info about our dependcies
+npm install or i <package name>   to install package local
+npm install -g <package name>     ................. global
+npm install -D or --save-dev to install packages as dev dependcies
+npm uninstall <package name>   to uninstall package
+npm uninstall -g <package name> to uninstall package installed gloabally
+
+npm list or ls -g  to check packages installed gloabally
