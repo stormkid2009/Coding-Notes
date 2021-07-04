@@ -1,0 +1,1 @@
+the result here : this is first text;,here: this is second text;append to result text

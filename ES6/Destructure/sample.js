@@ -3,18 +3,18 @@ in this section we will cover destructure in ecma 6
 
 */
 
-const user = {
-  firstName: "",
-  secondName: ""
-};
+let user = {
+  firstName:"sherif",
+  secondName:"ahmed"
+}
+
 //unpack object props into variables which we can use easily for each.
 
 let { firstName: x, secondName: y } = user;
 const fullName = (first, last) => {
-  first = "Sherif";
-  last = "Hassan";
   console.log(`your name is ${first} ${last}`);
 };
+
 fullName(x, y);
 
 //destructure array

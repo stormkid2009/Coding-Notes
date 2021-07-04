@@ -1,0 +1,4 @@
+#adding node_modules and .env from pushing to github
+
+/node_modules
+.env
