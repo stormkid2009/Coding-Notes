@@ -13,10 +13,16 @@
 
 */
 
-app.get('/:word/echo',(req,res)=>{
-    const {word} = req.params;
-    res.json({echo:word});
-});
+//setup new route with params (we gonna use id here)
+
+app.get('/api/users/:userID',(req,res)=>{
+    const {userID} = req.params;
+    const oneUser = users.find(user => user.id===Number(userID))
+    if(!oneUser){
+        return res.status(404).json(`user doesn't exist!!`)
+    }
+    return res.json(oneUser)
+})
 
 //In order to get route parameters from a POST request, the general format is as follows:
 app.post("/:param1/:param2", (req, res) => {
@@ -28,3 +34,9 @@ app.post("/:param1/:param2", (req, res) => {
     // Send the req.params object as a JSON Response
     res.json(req.params);
   });
+
+  //setup more complex api route
+app.get('/api/users/:userID/address/:street',(req,res)=>{
+    console.log(req.params);
+    res.send(`fetched successfully`)
+})

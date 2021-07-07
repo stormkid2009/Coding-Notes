@@ -1,10 +1,4 @@
-/* "using body-parser package with post request"
-POST >>> another http verb to handle client request
-which objectif is create new items or data on the server side.
 
-
-
-*/
 //simple api request from client to add some data:
 //we use here axios library
 const axios = require('axios')
@@ -42,15 +36,18 @@ axios
     This is the default format used by HTML forms. 
  2-With Ajax, you can also use JSON to handle data having a more complex structure.
  3-multipart/form-data: This one is used to upload binary files. 
- in the example down below we will cover the first type[URLencoded body] 
- we will use (body-parser) package for this 
- the package allows us to use series of middleware, which can decode data in different formats.
+ in the example down below we will cover the first type[URLencoded body] which is express builtin method
+ to allow us to use series of middleware, which can decode data in different formats.
  
  */
-//import body-parser package in our code this will be at the top of file.
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
+
+const express = require('express');
+const app = express();
+//parse form data
+app.use(express.urlencoded({extended:false}));
+//parse json data
+app.use(express.json());
+
 
 //Note: the middleware must be mounted before all the routes which need it.
 //Note:extended=false is a configuration option that tells the parser to use the classic encoding. 

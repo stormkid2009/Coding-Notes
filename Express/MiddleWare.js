@@ -18,3 +18,8 @@ the static assets needed by your application (stylesheets, scripts, images).
   //interesting thing here that if we can include our html file in folder with assets
   //app.use will serve it normally
   app.use(express.static('./public'));
+  //if we want to use logger for all our routes simply above code
+  const logger = require('./logger');
+  app.use(logger);
+  //or specify certain path
+  app.use('/api/v1',logger)

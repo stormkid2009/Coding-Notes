@@ -1,5 +1,3 @@
-/*  Implement a Root-Level Request Logger Middleware  */
-
 /*
 middleware : are functions that take 3 arguments (req,res,next) 
 req >>> request object
@@ -9,12 +7,8 @@ middleware can make side effects to the app:
 add information to the request or  response 
 to end the cycle they send response and if not the next function gonna start its job.
 */
-/*
-function (req,res,next){
-    console.log("middlewar sent this response");
-    next();
-}
-*/
+
+
 /*
 let's suppose u mount this function on route when it matches its route
 the message "middlewar sent......." then it excutes the next function in the stack.
@@ -30,3 +24,15 @@ app.use((req,res,next)=>{
 });
 //notice the spaces in the string above between req.method and req.path
 //alson space before and after (-)
+
+//we can use our logger in sperate file and export it as module 
+const logger = (req, res, next) => {
+    const method = req.method;
+    const url = req.url;
+    const time = new Date().getFullYear();
+    console.log(method, url, time);
+    next();
+  };
+  
+  module.exports = logger;
+  
