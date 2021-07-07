@@ -14,3 +14,7 @@ the static assets needed by your application (stylesheets, scripts, images).
 
   //Assets at the /public route
   app.use("/public", express.static(__dirname + "/public"));
+
+  //interesting thing here that if we can include our html file in folder with assets
+  //app.use will serve it normally
+  app.use(express.static('./public'));
