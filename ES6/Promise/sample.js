@@ -8,7 +8,7 @@ const checkColor=(color)=>{
         }
     });
 }
-
+//call the function which return a promise
 checkColor('red')
-.then(result => console.log(result))
-.catch(err => console.log(err))
+.then(result => console.log(result)) //if resolved
+.catch(err => console.log(err))      //if rejected
