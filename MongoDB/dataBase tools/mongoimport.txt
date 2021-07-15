@@ -1,0 +1,27 @@
+here we will import data from external file to our database
+mongodb accepts to import and export file [json format,csv(comma seperated values) , tsv(tab seperated values)]
+//note we shall use linux terminal not mongo shell for doing this
+//we have data.json file in our desktop
+
+$ mongoimport --<optional for data Array type> --db <database name> --collection <collection name> --file <file name>
+
+$ mongoimport --jsonArray --db contacts --collection friends --file data.json
+
+now lets check our mongo shell
+$ mongo
+>show dbs                    to display our databases
+simply we will find our contacts database there
+>use contacts                to switch to contacts db
+switched to db contacts
+> show collecions            to display contacts collections
+friends
+>db.friends.find()           to display friends content or using pretty format
+>db.friends.find().pretty
+
+
+importing csv file to our database
+$mongoimport --db <db name> --collection <collection name> --type csv --headerline --file <file name>
+$ mongoimport --db contacts --collection partners --type csv --headerline --file list.csv
+
+if our csv file without the headers then we shall input them manually:
+$ mongoimport --db contacts --collection intim --type csv --fields name,age --file list.csv

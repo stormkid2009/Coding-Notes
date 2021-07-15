@@ -1,0 +1,9 @@
+$mongoexport --db <db name> --collection or -c <collection name> --out <file name>.json
+
+in case of csv files
+
+$mongoexport --db <db name> --collection or -c<collection name> --type csv --fields <field1,field2,...> 
+--out <file name>.csv
+
+$ mongoexport --db contacts -c friends --out newdata.json
+$ mongoexport --db contacts -c intim --type csv --fields name,age --out newList.csv
