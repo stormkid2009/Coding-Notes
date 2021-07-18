@@ -1,0 +1,51 @@
+now lets check our mongo shell
+$ mongo
+>show dbs                    to display our databases
+simply we will find our  databases there
+>use <db name>                 switch to certain db
+switched to db contacts
+> show collecions            to display db collections
+friends
+>db.<collection name>.find({query object} )           to display friends content or using pretty format
+>db.<collection name>.find({query object}).pretty
+
+>db.<collection name>.find({query object}).limit(10)   it will show 10 documents
+
+normally it will show 20 documents but u can control the limit
+>it    for display more result means iterate
+
+>db.<collection name>.find({query object}).count()  it return a number of documents
+
+remember if we omit {query object} we will get all documents with find() and only one random with findOne()
+>db.<collection name>.findOne({query object})    to find only one doucment
+
+>db.<collection name>.insert({document object}) to insert document with the shell
+
+note here we can insert many documents with different "_id"
+but if we have same _id for two document mongodb will insert the first one only
+and throw error so the documents after repeated _id won't be registered
+if we want to pass this simply add:
+
+>db.<collection name >.insert({object} or [{array of objects}],{"ordered":false})
+
+"update":
+>db.<collection name >.updateOne({query object},{"$set":{object to update}})
+
+>db.players.updateOne({"name":"virus"},{"$set":{"age":43}})
+
+operators:
+$lt      >>>> less than 
+$gt      >>>> greater than 
+$push    >>>> add to filed array we can use (. notation) to access internal elements
+    {$push:{<field>:"element "}}  to add at the end of array
+$pop     >>>> delete from an field array
+    {$pop:{<field>:1 or -1}} 1 to delete element from the end of array and -1 from the start
+$set    >>>>> modify value of field or even add it if it is not existed
+for all players whose id is less than 9 will be from sohag city
+> db.players.updateMany({"_id":{"$lt":9}},{"$set":{"city":"sohag"}})
+> db.players.updateMany({},{"$set":{"city":"sohag"}}) empty object as query to match all docs
+
+>db.<collection name>.drop()    to delete  a collection
+>db.<collection name>.deleteOne({query object})   to delete one document
+>db.<collection name>.deleteMany({query object})  to delete multiple documents
+
