@@ -7,6 +7,7 @@ switched to db contacts
 > show collecions            to display db collections
 friends
 >db.<collection name>.find({query object} )           to display friends content or using pretty format
+
 >db.<collection name>.find({query object}).pretty
 
 >db.<collection name>.find({query object}).limit(10)   it will show 10 documents
@@ -15,7 +16,8 @@ normally it will show 20 documents but u can control the limit
 >it    for display more result means iterate
 
 >db.<collection name>.find({query object}).count()  it return a number of documents
-
+>db.<collection name>.find({query object}).sort({age:1 or -1})
+    1 for ascending order and -1 for descending order for any type string or number ....
 remember if we omit {query object} we will get all documents with find() and only one random with findOne()
 >db.<collection name>.findOne({query object})    to find only one doucment
 
@@ -41,11 +43,18 @@ $push    >>>> add to filed array we can use (. notation) to access internal elem
 $pop     >>>> delete from an field array
     {$pop:{<field>:1 or -1}} 1 to delete element from the end of array and -1 from the start
 $set    >>>>> modify value of field or even add it if it is not existed
+    {$set:{field to modify}}
+$unset  >>>> remove a field or fileds
+    {$unset:{field or fields to remove}}
+    {$unset:{name:""}}   {$unset:{name:"",job:""}}
+
 for all players whose id is less than 9 will be from sohag city
 > db.players.updateMany({"_id":{"$lt":9}},{"$set":{"city":"sohag"}})
 > db.players.updateMany({},{"$set":{"city":"sohag"}}) empty object as query to match all docs
+> db.players.updateOne({_id:6},{$set:{"address.city":"cairo"}})
 
 >db.<collection name>.drop()    to delete  a collection
 >db.<collection name>.deleteOne({query object})   to delete one document
 >db.<collection name>.deleteMany({query object})  to delete multiple documents
+>db.dropDatabase() to delete current database
 
