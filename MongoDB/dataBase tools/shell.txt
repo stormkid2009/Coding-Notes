@@ -36,8 +36,11 @@ if we want to pass this simply add:
 >db.players.updateOne({"name":"virus"},{"$set":{"age":43}})
 
 operators:
-$lt      >>>> less than 
-$gt      >>>> greater than 
+$<operator>       or $<filed>  means the value of this field
+$eq      >>>> equal to
+$ne      >>>> not equal to
+$lt      >>>> less than            $lte   >>> less than or equal to 
+$gt      >>>> greater than         $gte   >>> great than or equal to
 $push    >>>> add to filed array we can use (. notation) to access internal elements
     {$push:{<field>:"element "}}  to add at the end of array
 $pop     >>>> delete from an field array
@@ -47,6 +50,12 @@ $set    >>>>> modify value of field or even add it if it is not existed
 $unset  >>>> remove a field or fileds
     {$unset:{field or fields to remove}}
     {$unset:{name:""}}   {$unset:{name:"",job:""}}
+$and      {$and:[array of one or more objects]}        query result must be true with all elements 
+$or       {$or:[array of one or more objects]}         query result with true elements only
+$nor      {$nor:[array of one or more objects]}        query result with false elements only
+$not      { field: { $not: { <operator-expression> } } } query result with all elements don't match.
+
+
 
 for all players whose id is less than 9 will be from sohag city
 > db.players.updateMany({"_id":{"$lt":9}},{"$set":{"city":"sohag"}})
@@ -58,3 +67,5 @@ for all players whose id is less than 9 will be from sohag city
 >db.<collection name>.deleteMany({query object})  to delete multiple documents
 >db.dropDatabase() to delete current database
 
+>db.<collection name>.distinct("<filed>") to return array of filed's values
+>db.<collection name>.count({query object})
