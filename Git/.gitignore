@@ -1,4 +1,15 @@
 #adding node_modules and .env from pushing to github
+#to remove react-app git
+#cd client
+#rm -rf .git
 
-/node_modules
+
+#dependencies
+node_modules
+node_modules/
+
+# production
+/client/build
+
+# misc
 .env
