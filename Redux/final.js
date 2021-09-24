@@ -1,31 +1,31 @@
-//we have to study the code below carefully
+//this will go with the old way with connect api
 //to figure out the steps of process
 
 // Redux:
 const ADD = 'ADD';
-
+//define our action creator:
 const addMessage = (message) => {
   return {
     type: ADD,
-    message: message
+    payload: message
   }
 };
-
+//define our reducer:
 const messageReducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
       return [
         ...state,
-        action.message
+        action.payload
       ];
     default:
       return state;
   }
 };
-
+//Creating our store with redux method createStore:
 const store = Redux.createStore(messageReducer);
 
-// React:
+// React component which we will connect with redux store:
 class Presentational extends React.Component {
   constructor(props) {
     super(props);
