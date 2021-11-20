@@ -1,0 +1,49 @@
+what is layout design?
+Layout design is the process of arranging visual and textual elements on-screen or 
+on-paper in order to grab a reader’s attention and communicate information in a visually appealing way.
+Designers may also use Grid to arrange their layout design elements in a clear,legible fashion.
+
+what are the elements of layout design?
+1- Text :
+    includes headlines,subheadings,headers,paragraphs,footers,buttons,menus.
+
+2- Image :
+    includes photos,images,infographics,illustrations.
+
+3- Line : 
+    refers to how two points are connected in space
+    Whether they’re horizontal lines, diagonal lines, or vertical lines.
+
+4- Shape :
+    like circle,rectangle,triangle,oval or any other shape can be used in layout design 
+    to add graphic elements to a page,highlight text, or delineate space between other visual elements.
+
+5- White space :
+    the blank space around an element can draw attention to it and make it stand out.
+
+
+what are the principles of layout design?
+
+1- Alignment :
+    refers to the way designer arranges elements of his design in relation to one another.
+
+2- Visual hierarchy :
+    leading the user visually from the most important elements to the less ones.
+
+3- Contrast :
+    is used with alignment and balance to help design look unique and eye-catching.
+
+4- Balance :
+    visual balance refers to how elements balance each other out.
+
+5- Proximity :
+    refers to how elements are close or far from each other.
+    Proximity can help users make connections between different visual elements of a project.
+
+
+what is the purpose of a grid in layout design?
+    Designers may choose to use a grid when making a layout design to organize the
+    many visual elements of an image. The most common grid layout is the column
+    grid which organizes an image into equally-sized columns. Other designers opt to
+    arrange their image into a grid of nine equally-sized rectangles which is useful for
+    establishing the focal point of a portrait-style layout.
