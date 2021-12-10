@@ -1,0 +1,12 @@
+                       The React framework for production 
+
+it is built around the concept of pages , page is a react component 
+exported from [.js,.jsx,.ts,.tsx] file in the pages directory,each page is 
+related to a specific route based on file name or dir name:
+/posts  or /posts/index.js -----> http://localhost:3000/posts
+dynamic routing:
+/posts/[id].js -----> http://localhost:3000/posts/12 or http://localhost:3000/posts/4
+
+installation :
+$npx create-next-app@latest
+$npx create-next-app app-name

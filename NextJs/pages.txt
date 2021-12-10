@@ -1,0 +1,10 @@
+1-page based routing mechanism -pages are associated with aroute based on their file name.
+2-Nested routes -Nested folder structure,files will be automatically routed in the same wayin
+the URL.
+3-Dynamic routes-Can be created by adding square brackets to pages name or folder name
+4-Catch all routes -Add three dots inside square brackets to create catch all route.
+helpful when u want different URLs for the same page layout or even when
+you're working with pages where some of the route parameters are optional
+
+examples for the routing based on dirctory orders:
+

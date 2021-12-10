@@ -42,8 +42,7 @@ what are the principles of layout design?
 
 
 what is the purpose of a grid in layout design?
-    Designers may choose to use a grid when making a layout design to organize the
-    many visual elements of an image. The most common grid layout is the column
-    grid which organizes an image into equally-sized columns. Other designers opt to
+    to organize the visual elements of an image. The most common grid layout is the column
+    grid which organizes an image into equally-sized columns[most use 12 columns grid]. Other designers opt to
     arrange their image into a grid of nine equally-sized rectangles which is useful for
     establishing the focal point of a portrait-style layout.
