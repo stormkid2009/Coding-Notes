@@ -1,0 +1,35 @@
+1- 
+   getStaticProps runs only on the server side 
+   the function will never run on client side
+   the code we write inside getStaticProps won't be included in the JS bundle that is sent to the browser
+
+2- 
+   we can write server-side code directly inside getStaticProps
+   accessing the file system using FS module or quering database can be done inside it
+   we dont have to worry about API keys as they won't be sent to the browser
+
+3- 
+   getStaticProps is only allowed inside pages route and can not be written inside regular component
+   it is used only for pre-rendering and not client-side data fetching
+
+4- 
+   getStaticProps should return an object and this object contain props key which is an object too
+
+5- 
+   getStaticProps will run at build time
+   during development it will run on every request
+
+********************************************
+
+- any Link component (initially or through scroll) will be prefetched by default
+  (including the corresonding data) for pages using Static Generation
+
+- when a page with getStaticProps is pre-rendered at build time,in addition of the HTML file,
+   next-js generates JSON file holding the result of running getStaticProps
+   the JSON file will be used in client-side routing through next/link or next/router
+
+-  when you navigate to a page that's pre-rendered using getStaticProps,next-js fetches
+   the JSON file (pre-computed at build time) and use it as the props to create the page
+   at the client-side
+
+- client-side page transitions will not call getStaticProps as only the exported JSON is used

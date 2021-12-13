@@ -10,3 +10,8 @@ dynamic routing:
 installation :
 $npx create-next-app@latest
 $npx create-next-app app-name
+
+<<Scripts>>
+$npm run dev    or yarn dev      run the server on development mode
+$npm run build  or yarn build    run the server on build mode
+$npm run start  or yarn start    start the build application
