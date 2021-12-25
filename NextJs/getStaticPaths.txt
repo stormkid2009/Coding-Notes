@@ -1,0 +1,23 @@
+//it iformes next js how many pages should pre-render in build time
+//via paths object which contain  array of params represent the dynamic pageId
+it returns an object with required paths key
+paths is array of objects [{params:{pageId:`page path`}},{{}},......]
+>>>> fallback:false ?
+1- the paths returned from getStaticPaths will be rendered to HTML at build time
+   with getStaticProps.
+2- any paths not returned from getStaticPaths will result in a 404 page.
+
+set fallback to false is suitable for application with small number of paths to pre-render.
+
+>>>> fallback : true?
+1- the paths returned from getStaticPaths will be rendered to HTML at build time
+   with getStaticProps.
+2- the paths have not been generated at build time will not result in a 404 page.instead,
+   Next.js will serve a "fallback" version of the page on the first request to such a path.
+3- in the background,Next.js will statically generate the requested path HTML and JSON,
+   this includes running getStaticProps.
+4- when that's done,the browser receives the JSON for the generated path.this will be used to 
+   automatically render the page with the required props .from the user's perspective,the page
+   will be swapped from the fallback page to the full page.
+5- at the same time,Next.js will keep track the new list of pre-rendered pages.Subsequent requests
+   to the same path will serve the generated page,just like other pages pre-rendered at build time.
