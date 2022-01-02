@@ -1,0 +1,13 @@
+Incremental Static Regeneration
+
+there was a need to update static pages after building which needed change without having to rebuild the whole application.
+to avoid problems after building app [data updated in DB and not in the app "stale data"]
+well the solution is to add revalidate key directly in the function getStaticProps after props object.
+<code example>
+
+export async function getStaticProps(){
+    return{
+        props:{},
+        revalidate:10   >>>> 10 second here to revalidate we can change it as we need
+    }
+}

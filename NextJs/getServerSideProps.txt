@@ -1,0 +1,23 @@
+well this is the second type of pre-rendering which deals with server-side
+as it is clear we can write backend code directly here
+pre-rendering will be with every request for data
+Next-JS give us this wonderful async function to deal with backend code
+code in general will be 10% statically with getStaticProps
+and 90% with getServerSideProps for dynamic app
+this is an example for our function and how it works:
+
+<<Code example>>
+
+export async function getServerSideProps(context){
+    const {params} = context
+    const {category} = params
+    const response = await fetch(`http://localhost:4000/news?category=${category}`)
+    const data = await response.json()
+
+    return {
+        props:{articles:data},
+        category,
+    }
+}
+
+notice that we will send {articles,category} as params to our page function to deal with data

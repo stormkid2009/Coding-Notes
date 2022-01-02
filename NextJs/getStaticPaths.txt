@@ -21,3 +21,15 @@ set fallback to false is suitable for application with small number of paths to 
    will be swapped from the fallback page to the full page.
 5- at the same time,Next.js will keep track the new list of pre-rendered pages.Subsequent requests
    to the same path will serve the generated page,just like other pages pre-rendered at build time.
+
+>>>> fallback:"block"?
+1- the paths returned from getStaticPaths will be rendered to HTML at build time
+   with getStaticProps.
+2- the paths have not been generated at build time will not result in a 404 page.instead,
+    on the first request to such a path,Next.js will render  the page on the server and return
+    generated HTML.
+3-when that is done,the browser receives the HTML for generated path,from the user's perspective:
+   "browser is requesting the page" ->>>>> "the full pages is loaded" (there is no flash of loading/fallback state).
+4- at the same time,Next.js will keep track the new list of pre-rendered pages.Subsequent requests
+   to the same path will serve the generated page,just like other pages pre-rendered at build time.
+
