@@ -46,14 +46,56 @@ export const {ordered,restocked} = cakeSlice.actions;
 
 ---
 ```js
+// "./src/redux/features/user/userSlice
+
+//import createAsyncThunk to deal with fetch data
+//which bring a promise with 3 cases
+import {createSlice,createAsyncThunk} from '@reduxjs/toolkit';
+import axios from 'axios'
+
+const initialState = {
+  loading:false,
+  users:[],
+  error:'',
+};
+export const fetchUsers = createAsyncThunk('user/fetchUsers',()=>{
+  return axios.get('https://jsonplaceholder.typicode.com/users')
+  .then((response)=> response.data)
+})
+const userSlice = createSlice({
+  name:'user',
+  initialState,
+  extraReducers:(builder)=>{
+    builder.addCase(fetchUsers.pending,(state)=>{
+      state.loading = true
+    })
+    builder.addCase(fetchUsers.fulfilled,(state,action)=>{
+      state.loading = false
+      state.users = action.payload
+      state.error = ''
+    })
+    builder.addCase(fetchUsers.rejected,(state,action)=>{
+      state.loading = false
+      state.users = []
+      state.error = action.error.message
+    })
+  }
+})
+
+export default userSlice.reducer;
+
+```
+---
+```js
 // "./src/redux/app/store.js"
 import {configureStore} from '@reduxjs/toolkit';
 import cakeReducer from '../features/cake/cakeSlice';
-
+import userReducer from '../features/user/userSlice';
 //configure our store
 const store = configureStore({
   reducer:{
-    cake:cakeReducer
+    cake:cakeReducer,
+    user:userReducer,
   }
 });
 
@@ -88,5 +130,33 @@ const CakeView = ()=>{
 }
 
 export default CakeView;
+
+```
+
+---
+
+```js
+import React,{useEffect} from 'react';
+import {useDispatch,useSelector} from 'react-redux';
+import {fetchUsers} from './userSlice';
+
+export default function UserView(){
+  const dispatch=useDispatch();
+  const user = useSelector((state)=> state.user);
+  useEffect(()=>{
+    dispatch(fetchUsers())
+  },[])
+  return(<div>
+    <h1>the list of users </h1>
+    {user.loading && <div>loading...</div>}
+    {!user.loading && user.error ? <div>kind of error : {user.error}</div> : null}
+    {!user.loading && user.users.length ? (
+      <ul>
+        {user.users.map((user)=> <li key={user.id}>{user.name}</li>)}
+      </ul>
+    ):null}
+  </div>)
+
+}
 
 ```
