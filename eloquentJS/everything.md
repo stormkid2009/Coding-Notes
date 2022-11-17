@@ -1,5 +1,6 @@
-//simulate js method every which check every element to certain condition
-//and return true or false
+
+* simulate js method every which check every element to certain condition and return true or false
+```js
 
 const every=(arr,test)=>{
     for(let el of arr){
@@ -30,3 +31,5 @@ console.log(every([], n => n < 10));
 console.log(every2([1, 3, 5], n => n < 10));
 console.log(every2([2, 4, 16], n => n < 10));
 console.log(every2([], n => n < 10));
+
+```

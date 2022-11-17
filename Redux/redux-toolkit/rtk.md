@@ -5,6 +5,7 @@ but it still make confuse for many developpers:
   * too much boilerplate code to write
   * installing alot of packages
   * setup the store is much complicated
+  
 * rtk(redux toolkit) brings to us:  
   *  simplicity for more clean good
   *  it comes with predefined methods like ..(immer , redux-thunk ,redux , reselect)
@@ -23,7 +24,7 @@ but it still make confuse for many developpers:
   behind the secene it uses:  
   *  **createAction**
   *  **createReducer**
-  *  we can use **Immer** to mutate updates to the state
+  *  **Immer** to safely mutate the state
   ---
   ###  **cakeSlice.js**
   ```javascript
