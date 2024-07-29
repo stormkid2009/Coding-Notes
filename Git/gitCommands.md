@@ -177,3 +177,9 @@ $ git branch -d <branch name>
 * Do same thing like merge but order commits in a better way.
 * Use rebase when you want to keep a linear commit history
 * DON’T use rebase on a public/shared branch
+
+```bash
+$ git reset --hard < commit id >
+
+```
+*** To discard changes and go back to certain commit with its id ***
