@@ -37,7 +37,7 @@ as the name telling spread the elements of iterable or string***
 
 ```js
 let arr=[1,2,3,4,...[5,6]];
-console.log(arr); //output [1,2,3,4,5]
+console.log(arr); //output [1,2,3,4,5,6]
 ```
 **here we join to existing array another one  with two or more elements[5,6] using the spreed operator**
 
