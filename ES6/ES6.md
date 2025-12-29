@@ -48,13 +48,13 @@ function sum (x,y,s){
     return x + y+ s;
 }
 let nums = [100,200,700];
-console.log(sum(...nums));
+console.log(sum(...nums));  // output 1000
 
 
 //using spread with string
 let spellName =[..."sherif"];
-console.log(spellName);
-console.log(..."sherif");
+console.log(spellName);   // output [ 's', 'h', 'e', 'r', 'i', 'f' ]
+console.log(..."sherif");  // output  s h e r i f
 ```
 
 ***Spread with object (new in ecma 2018)***
