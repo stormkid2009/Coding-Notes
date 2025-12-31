@@ -25,7 +25,7 @@ console.log(firstName,secondName);
 let Arr=[1,2,3,4,5];
 let [a,b,,c,d]=Arr;
 //we omit the third element in the array as we have only 4 variables
-console.log(a,b,c,d);
+console.log(a,b,c,d);   // output 1 2 4 5
 ```
 
 -----------------------
