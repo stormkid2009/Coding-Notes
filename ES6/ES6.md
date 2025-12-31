@@ -205,7 +205,7 @@ let rabbit = {
 const checkColor=(color)=>{
     return new Promise((resolve,reject)=>{
         if (color==="red"){
-            resolve('You suppoer Ahly Team !!')
+            resolve('You support Al Ahly Team !!')
         }else{
             reject('sadly You choose the wrong Team !!')
         }
