@@ -131,8 +131,7 @@ console.log(reducer);  // output 10
 ------------------------
 # Class
 
-**Classes are a template for creating objects.**
-**A class is a blueprint for creating objects with shared properties and methods. It was introduced in ES6 (2015).**
+***A class is a blueprint for creating objects with shared properties and methods. It was introduced in ES6 (2015).***
 
 ```js
 //Class Declaration
