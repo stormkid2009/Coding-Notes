@@ -132,33 +132,56 @@ console.log(reducer);  // output 10
 # Class
 
 **Classes are a template for creating objects.**
+**A class is a blueprint for creating objects with shared properties and methods. It was introduced in ES6 (2015).**
 
 ```js
 //Class Declaration
 class Person {
-    constructor(job){
-        this.job = job;
+    // Constructor - called when creating new instance
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
     }
-    speak(phrase){
-        console.log(`
-        The ${this.job} person says ${phrase}
-        `);
+    // Method
+    speak(){
+        return ` Hello, I am  ${this.name} ,I am ${this.age} years old `;
     }
+   // Static method (called on class, not instance)
+   static species() {
+    return 'Homo sapiens';
+  }
 };
 
-let Ahmed = new Person('engineer');
-Ahmed.speak(`I create software!!`);
+let Ahmed = new Person('Ahmed',33);
+console.log(Ahmed.speak());  // output Hello, I am Ahmed , I am 33 years old
+console.log(Person.species()); // "Homo sapiens"
+
 //Class expression to define class alson
 let Person = class {} //unnamed
 Person = class {}     //named
 ```
+**Key Class features:**
+- Constructor: Special method for initializing objects
+- Methods: Functions inside class (automatically added to prototype)
+- Static Methods: Called on the class itself
+- Inheritance: Using extends keyword
 
+  
 ```js
-let rabbit = {};
-rabbit.speak= function(phrase){
-    console.log(`${phrase}`)
-};
-rabbit.speak(`I am hungry ,I need carrots`)
+class Employee extends Person {
+  constructor(name, age, jobTitle) {
+    super(name, age); // Calls parent constructor
+    this.jobTitle = jobTitle;
+  }
+  
+  work() {
+    return `${this.name} is working as a ${this.jobTitle}`;
+  }
+}
+
+const emp = new Employee('Bob', 25, 'Developer');
+console.log(emp.speak()); // Inherited from Person
+console.log(emp.work());  // From Employee
 
 //we can use Object.prototype  =>  Object.create(object) to make instance from object
 let rabbit = {
