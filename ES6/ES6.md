@@ -113,19 +113,19 @@ console.log(checkLen(5,6,7,8)); //should give 4 which is the length of rest arra
 let Arr=['A','B','C'];
 let newArr = Arr.map(item=>item+"+");
 //the callback function iterate over array's element and do the action
-console.log(newArr);
+console.log(newArr);  // output [ 'A+', 'B+', 'C+' ]
 ```
 
 **arr.filter  return new array which elements satisfy certain condition**
 ```js
 let theArr = newArr.filter(item=> item === "B+");
-console.log(theArr);
-```
+console.log(theArr);  // output [ 'B+' ]
+``` 
 **arr.reduce >>> return new array with reduce numeric elements to one as sum**
 ```js
 let array = [1,2,3,4];
 let reducer=array.reduce((accumlator,current)=> accumlator+current);
-console.log(reducer);
+console.log(reducer);  // output 10
 ```
 
 ------------------------
