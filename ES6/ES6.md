@@ -64,7 +64,7 @@ let obj={
     name:"sherif"
 }
 let newObj={...obj,age:42};
-console.log(newObj);
+console.log(newObj);  // output { id: 122, name: 'sherif', age: 42 }
 ```
 
 ------------------------
