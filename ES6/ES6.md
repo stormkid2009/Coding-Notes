@@ -93,14 +93,14 @@ function multiply(...args){
 console.log(multiply(4,5,5,10)); //output 1000
 
 function multiplyN2(x,y,...args){
-    return x * y * (args.reduce((x,y)=>{
-        return x * y;
+    return x * y * (args.reduce((acc,curr)=>{
+        return acc * curr;
     }));
 }
 console.log(multiplyN2(4,5,5,10)); //output 1000
 
 const checkLen = (...args) => args.length;
-console.log(checkLen(5,6,7,8)); //should give 4
+console.log(checkLen(5,6,7,8)); //should give 4 which is the length of rest array
 ```
 
 -------------------------------
